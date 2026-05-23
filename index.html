@@ -40,8 +40,6 @@ body {
   margin: 0 auto;
   padding: 1.25rem 1rem 5rem;
 }
-
-/* ── Header ── */
 .hdr {
   text-align: center;
   margin-bottom: 1.75rem;
@@ -58,110 +56,56 @@ body {
 }
 .hdr h1 { font-size: 20px; font-weight: 700 }
 .hdr p  { font-size: 13px; color: var(--txt2); margin-top: 4px }
-
-/* ── Steps ── */
-.steps {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
+.steps { display: flex; align-items: center; margin-bottom: 1.5rem; }
 .step-item { display:flex; align-items:center; gap:6px; font-size:13px }
 .step-num {
-  width:26px; height:26px;
-  border-radius: 50%;
+  width:26px; height:26px; border-radius: 50%;
   display:flex; align-items:center; justify-content:center;
   font-size:12px; font-weight:600; flex-shrink:0;
-  border: 1.5px solid var(--border2);
-  color: var(--txt3);
-  transition: all .2s;
+  border: 1.5px solid var(--border2); color: var(--txt3); transition: all .2s;
 }
 .step-num.active { background:var(--blue); border-color:var(--blue); color:#fff }
 .step-num.done   { background:var(--green); border-color:var(--green); color:#fff }
 .step-label { color:var(--txt3) }
 .step-label.active { color:var(--txt); font-weight:600 }
 .step-line { flex:1; height:1px; background:var(--border); margin:0 8px }
-
-/* ── Card ── */
 .card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.1rem 1.25rem;
-  margin-bottom: .875rem;
-  box-shadow: var(--shadow);
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.1rem 1.25rem;
+  margin-bottom: .875rem; box-shadow: var(--shadow);
 }
 .card-title {
-  font-size: 11px; font-weight: 700;
-  color: var(--txt3);
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  margin-bottom: .875rem;
-  display: flex; align-items:center; gap:5px;
+  font-size: 11px; font-weight: 700; color: var(--txt3);
+  text-transform: uppercase; letter-spacing: .06em;
+  margin-bottom: .875rem; display: flex; align-items:center; gap:5px;
 }
-
-/* ── Fields ── */
 .field { margin-bottom: .875rem }
 .field:last-child { margin-bottom: 0 }
-.field label {
-  display: block;
-  font-size: 13px;
-  color: var(--txt2);
-  font-weight: 500;
-  margin-bottom: 5px;
+.field label { display: block; font-size: 13px; color: var(--txt2); font-weight: 500; margin-bottom: 5px; }
+.field input, .field select, .field textarea {
+  width: 100%; padding: 9px 12px; border: 1px solid var(--border2);
+  border-radius: var(--radius-sm); font-size: 14px; background: #fff;
+  color: var(--txt); font-family: inherit; transition: border-color .15s, box-shadow .15s;
 }
-.field input,
-.field select,
-.field textarea {
-  width: 100%;
-  padding: 9px 12px;
-  border: 1px solid var(--border2);
-  border-radius: var(--radius-sm);
-  font-size: 14px;
-  background: #fff;
-  color: var(--txt);
-  font-family: inherit;
-  transition: border-color .15s, box-shadow .15s;
-}
-.field input:focus,
-.field select:focus,
-.field textarea:focus {
-  outline: none;
-  border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(24,95,165,.12);
+.field input:focus, .field select:focus, .field textarea:focus {
+  outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(24,95,165,.12);
 }
 .field textarea { resize: vertical; min-height: 72px }
 .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px }
-
-/* ── Option Buttons ── */
 .opts { display: flex; flex-wrap: wrap; gap: 7px }
 .opt-btn {
-  border: 1px solid var(--border2);
-  border-radius: var(--radius-sm);
-  padding: 8px 12px;
-  background: #fff;
-  cursor: pointer;
-  font-size: 13px;
-  color: var(--txt);
-  display: flex; align-items:center; gap:6px;
-  transition: all .12s;
-  font-family: inherit;
-  line-height: 1.3;
+  border: 1px solid var(--border2); border-radius: var(--radius-sm);
+  padding: 8px 12px; background: #fff; cursor: pointer; font-size: 13px;
+  color: var(--txt); display: flex; align-items:center; gap:6px;
+  transition: all .12s; font-family: inherit; line-height: 1.3;
 }
 .opt-btn:hover { border-color:var(--blue); background:var(--blue-lt) }
 .opt-btn.active { border-color:var(--blue); background:var(--blue-lt); color:var(--blue-dk); font-weight:600 }
-.opt-btn .dot {
-  width:7px; height:7px; border-radius:50%;
-  border: 1.5px solid currentColor; flex-shrink:0;
-}
+.opt-btn .dot { width:7px; height:7px; border-radius:50%; border: 1.5px solid currentColor; flex-shrink:0; }
 .opt-btn.active .dot { background:currentColor }
-
-/* ── Price Box ── */
 .price-box {
-  background: var(--bg);
-  border-radius: var(--radius-sm);
-  padding: .875rem;
-  margin-top: .75rem;
-  border: 1px solid var(--border);
+  background: var(--bg); border-radius: var(--radius-sm);
+  padding: .875rem; margin-top: .75rem; border: 1px solid var(--border);
 }
 .pr { display:flex; justify-content:space-between; font-size:13px; color:var(--txt2); margin-bottom:4px }
 .pr.total {
@@ -169,209 +113,101 @@ body {
   border-top: 1px solid var(--border); margin-top: 8px; padding-top: 8px;
 }
 .pr.total span:last-child { color: var(--blue) }
-
-/* ── Upload ── */
 .upload-area {
-  border: 1.5px dashed var(--border2);
-  border-radius: var(--radius-sm);
-  padding: 1.25rem;
-  text-align: center;
-  cursor: pointer;
-  transition: all .15s;
+  border: 1.5px dashed var(--border2); border-radius: var(--radius-sm);
+  padding: 1.25rem; text-align: center; cursor: pointer; transition: all .15s;
 }
-.upload-area:hover, .upload-area.has-file {
-  border-color: var(--blue);
-  background: var(--blue-lt);
-}
+.upload-area:hover, .upload-area.has-file { border-color: var(--blue); background: var(--blue-lt); }
 .upload-area p { font-size:13px; color:var(--txt2); margin-top:6px }
 .upload-area .fname { font-size:13px; color:var(--blue); font-weight:600; margin-top:4px }
-
-/* ── Pay Methods ── */
 .pay-methods { display:flex; flex-direction:column; gap:8px }
 .pay-method {
-  border: 1px solid var(--border2);
-  border-radius: var(--radius-sm);
-  padding: 12px 14px;
-  cursor: pointer;
-  display: flex; align-items:center; gap:12px;
-  transition: all .12s;
-  background: #fff;
+  border: 1px solid var(--border2); border-radius: var(--radius-sm);
+  padding: 12px 14px; cursor: pointer; display: flex; align-items:center;
+  gap:12px; transition: all .12s; background: #fff;
 }
 .pay-method:hover { border-color:var(--blue) }
 .pay-method.active { border-color:var(--blue); background:var(--blue-lt); box-shadow:0 0 0 3px rgba(24,95,165,.08) }
-.pay-method-icon {
-  width:38px; height:38px; border-radius:9px;
-  display:flex; align-items:center; justify-content:center; flex-shrink:0;
-}
+.pay-method-icon { width:38px; height:38px; border-radius:9px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
 .pay-method-info { flex:1 }
 .pay-method-name { font-size:14px; font-weight:600; color:var(--txt) }
 .pay-method-desc { font-size:12px; color:var(--txt2) }
-.pay-method .radio {
-  width:16px; height:16px; border-radius:50%;
-  border: 1.5px solid var(--border2); flex-shrink:0;
-}
-.pay-method.active .radio {
-  border-color:var(--blue);
-  background:var(--blue);
-  box-shadow: inset 0 0 0 3px #fff;
-}
-
-/* ── QR / Slip ── */
+.pay-method .radio { width:16px; height:16px; border-radius:50%; border: 1.5px solid var(--border2); flex-shrink:0; }
+.pay-method.active .radio { border-color:var(--blue); background:var(--blue); box-shadow: inset 0 0 0 3px #fff; }
 .qr-box {
-  background: var(--bg);
-  border-radius: var(--radius-sm);
-  padding: 1.25rem;
-  text-align: center;
-  margin-top: .75rem;
-  border: 1px solid var(--border);
+  background: var(--bg); border-radius: var(--radius-sm); padding: 1.25rem;
+  text-align: center; margin-top: .75rem; border: 1px solid var(--border);
 }
 .qr-img {
-  width:150px; height:150px;
-  background: #fff;
-  border-radius: 10px;
-  margin: 0 auto .875rem;
-  display: flex; align-items:center; justify-content:center;
-  border: 1px solid var(--border);
-  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  width:150px; height:150px; background: #fff; border-radius: 10px;
+  margin: 0 auto .875rem; display: flex; align-items:center; justify-content:center;
+  border: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,.06);
 }
 .qr-amount { font-size:24px; font-weight:700; color:var(--blue); margin-bottom:4px }
 .qr-note   { font-size:12px; color:var(--txt2) }
-
 .slip-area {
-  border: 1.5px dashed var(--border2);
-  border-radius: var(--radius-sm);
-  padding: 1rem;
-  text-align: center;
-  cursor: pointer;
-  margin-top: .75rem;
-  transition: all .15s;
+  border: 1.5px dashed var(--border2); border-radius: var(--radius-sm);
+  padding: 1rem; text-align: center; cursor: pointer; margin-top: .75rem; transition: all .15s;
 }
 .slip-area:hover, .slip-area.has-slip { border-color:var(--green); background:var(--green-lt) }
-
-/* ── Buttons ── */
 .submit-btn {
-  width: 100%;
-  padding: 14px;
-  background: var(--blue);
-  color: white;
-  border: none;
-  border-radius: var(--radius-sm);
-  font-size: 15px;
-  font-weight: 700;
-  cursor: pointer;
-  font-family: inherit;
-  transition: background .15s, transform .1s;
+  width: 100%; padding: 14px; background: var(--blue); color: white;
+  border: none; border-radius: var(--radius-sm); font-size: 15px; font-weight: 700;
+  cursor: pointer; font-family: inherit; transition: background .15s, transform .1s;
   display: flex; align-items:center; justify-content:center; gap:8px;
-  margin-top: .5rem;
-  box-shadow: 0 2px 8px rgba(24,95,165,.25);
+  margin-top: .5rem; box-shadow: 0 2px 8px rgba(24,95,165,.25);
 }
 .submit-btn:hover { background:var(--blue-dk); transform:translateY(-1px) }
 .submit-btn:active { transform:translateY(0) }
-.submit-btn:disabled {
-  background: var(--bg2);
-  color: var(--txt3);
-  cursor: not-allowed;
-  box-shadow: none;
-  transform: none;
-}
-.btn-secondary {
-  flex: .4;
-  background: #fff;
-  color: var(--txt);
-  border: 1px solid var(--border2);
-  box-shadow: none;
-}
+.btn-secondary { flex:.4; background:#fff; color:var(--txt); border:1px solid var(--border2); box-shadow:none; }
 .btn-secondary:hover { background:var(--bg); transform:none }
-
-/* ── Success ── */
 .success-wrap { text-align:center; padding:1.25rem 0 2rem }
 .success-icon {
-  width:64px; height:64px;
-  background: var(--green-lt);
-  border-radius: 50%;
-  display:flex; align-items:center; justify-content:center;
-  margin: 0 auto 1rem;
+  width:64px; height:64px; background: var(--green-lt); border-radius: 50%;
+  display:flex; align-items:center; justify-content:center; margin: 0 auto 1rem;
   box-shadow: 0 0 0 8px rgba(59,109,17,.1);
 }
 .order-code-big {
-  font-size: 40px;
-  font-weight: 700;
-  letter-spacing: .12em;
-  color: var(--blue);
-  background: var(--blue-lt);
-  border-radius: var(--radius);
-  padding: 1rem;
-  margin: 1rem 0;
-  font-family: 'Courier New', monospace;
-  border: 1px solid rgba(24,95,165,.2);
+  font-size: 40px; font-weight: 700; letter-spacing: .12em; color: var(--blue);
+  background: var(--blue-lt); border-radius: var(--radius); padding: 1rem; margin: 1rem 0;
+  font-family: 'Courier New', monospace; border: 1px solid rgba(24,95,165,.2);
 }
 .info-rows {
-  background: var(--bg);
-  border-radius: var(--radius-sm);
-  padding: 1rem;
-  text-align: left;
-  margin-bottom: 1rem;
-  border: 1px solid var(--border);
+  background: var(--bg); border-radius: var(--radius-sm); padding: 1rem;
+  text-align: left; margin-bottom: 1rem; border: 1px solid var(--border);
 }
-.info-row {
-  display:flex; gap:10px;
-  font-size:13px;
-  padding: 5px 0;
-  border-bottom: 1px solid var(--border);
-}
+.info-row { display:flex; gap:10px; font-size:13px; padding: 5px 0; border-bottom: 1px solid var(--border); }
 .info-row:last-child { border-bottom:none; padding-bottom:0 }
 .info-row .lbl { color:var(--txt2); width:90px; flex-shrink:0; font-weight:500 }
 .info-row .val { color:var(--txt); font-weight:600 }
-
 .paid-badge {
-  display: inline-flex; align-items:center; gap:5px;
-  background: var(--green-lt); color:#27500A;
-  border-radius: 20px; padding:5px 14px;
-  font-size: 13px; font-weight:600;
-  margin-bottom: 1rem;
+  display: inline-flex; align-items:center; gap:5px; background: var(--green-lt); color:#27500A;
+  border-radius: 20px; padding:5px 14px; font-size: 13px; font-weight:600; margin-bottom: 1rem;
 }
-
-/* ── Sections ── */
 .section { display:none }
 .section.show { display:block }
-
-/* ── Loading Overlay ── */
 .loading-overlay {
-  position: fixed; inset:0;
-  background: rgba(255,255,255,.85);
-  display:flex; flex-direction:column;
-  align-items:center; justify-content:center;
-  z-index:999;
-  opacity:0; pointer-events:none;
-  transition: opacity .2s;
+  position: fixed; inset:0; background: rgba(255,255,255,.85);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  z-index:999; opacity:0; pointer-events:none; transition: opacity .2s;
 }
 .loading-overlay.show { opacity:1; pointer-events:auto }
 .spinner {
-  width: 40px; height:40px;
-  border: 3px solid var(--border);
-  border-top-color: var(--blue);
-  border-radius: 50%;
-  animation: spin .7s linear infinite;
+  width: 40px; height:40px; border: 3px solid var(--border);
+  border-top-color: var(--blue); border-radius: 50%; animation: spin .7s linear infinite;
 }
 @keyframes spin { to { transform:rotate(360deg) } }
 .loading-text { font-size:14px; color:var(--txt2); margin-top:12px; font-weight:500 }
-
-/* ── Toast ── */
 .toast {
-  position:fixed; bottom:20px; left:50%; transform:translateX(-50%);
-  background:#1A1915; color:#F7F6F2;
-  padding:8px 18px;
-  border-radius:20px;
-  font-size:13px;
-  opacity:0; pointer-events:none;
-  transition: opacity .25s, transform .25s;
-  white-space:nowrap;
-  z-index:1000;
-  transform: translateX(-50%) translateY(8px);
+  position:fixed; bottom:20px; left:50%;
+  background:#1A1915; color:#F7F6F2; padding:8px 18px; border-radius:20px;
+  font-size:13px; opacity:0; pointer-events:none; transition: opacity .25s, transform .25s;
+  white-space:nowrap; z-index:1000; transform: translateX(-50%) translateY(8px);
 }
-.toast.show {
-  opacity:1;
-  transform: translateX(-50%) translateY(0);
+.toast.show { opacity:1; transform: translateX(-50%) translateY(0); }
+.ref-hint {
+  font-size:12px; color:var(--txt3); margin-top:5px;
+  display:flex; align-items:center; gap:4px;
 }
 </style>
 </head>
@@ -391,7 +227,7 @@ body {
     <p>สั่งและชำระเงินออนไลน์ — รอรับแจ้งเมื่องานเสร็จ</p>
   </div>
 
-  <div class="steps" id="stepsBar">
+  <div class="steps">
     <div class="step-item">
       <div class="step-num active" id="sn1">1</div>
       <span class="step-label active" id="sl1">รายละเอียด</span>
@@ -408,7 +244,7 @@ body {
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════ STEP 1 ═══════════════════════════════════ -->
+  <!-- STEP 1 -->
   <div id="sec1" class="section show">
 
     <div class="card">
@@ -422,6 +258,11 @@ body {
           <label>เบอร์โทรศัพท์ <span style="color:red">*</span></label>
           <input id="cphone" type="tel" placeholder="08x-xxx-xxxx" autocomplete="tel">
         </div>
+      </div>
+      <div class="field" style="margin-top:.5rem">
+        <label>รหัส LINE (REFxxxxxx) <span style="color:red">*</span></label>
+        <input id="cref" type="text" placeholder="REFxxxxxxx" autocomplete="off" style="text-transform:uppercase" oninput="this.value=this.value.toUpperCase()">
+        <p class="ref-hint"><i class="ti ti-info-circle" style="font-size:13px"></i> พิมพ์ข้อความใดๆ ใน LINE ของร้านเพื่อรับรหัสนี้</p>
       </div>
     </div>
 
@@ -458,7 +299,6 @@ body {
         </div>
       </div>
 
-      <!-- Price hint per sheet -->
       <div id="priceHint" style="font-size:12px;color:var(--blue);background:var(--blue-lt);border-radius:6px;padding:7px 10px;margin-bottom:.875rem">
         <i class="ti ti-info-circle" style="font-size:13px;vertical-align:-1px"></i>
         <span id="priceHintText">ขาว-ดำ A4 = 1 ฿/แผ่น</span>
@@ -532,9 +372,8 @@ body {
     </button>
   </div>
 
-  <!-- ═══════════════════════════════════ STEP 2 ═══════════════════════════════════ -->
+  <!-- STEP 2 -->
   <div id="sec2" class="section">
-
     <div class="card">
       <div class="card-title"><i class="ti ti-receipt" style="font-size:14px"></i> สรุปคำสั่ง</div>
       <div class="price-box" style="margin-top:0">
@@ -578,7 +417,6 @@ body {
         </div>
       </div>
 
-      <!-- QR Section -->
       <div id="qrSection" style="margin-top:.75rem">
         <div class="qr-box">
           <div class="qr-img">
@@ -622,7 +460,6 @@ body {
         <input type="file" id="slipFile" accept="image/*" style="display:none" onchange="handleSlip(this,'slipArea','slipName',1)">
       </div>
 
-      <!-- Transfer Section -->
       <div id="transferSection" style="display:none;margin-top:.75rem">
         <div class="qr-box">
           <p style="font-size:13px;font-weight:600;margin-bottom:.625rem">ข้อมูลบัญชีโอนเงิน</p>
@@ -640,7 +477,6 @@ body {
         <input type="file" id="slipFile2" accept="image/*" style="display:none" onchange="handleSlip(this,'slipArea2','slipName2',2)">
       </div>
 
-      <!-- Cash Section -->
       <div id="cashSection" style="display:none;margin-top:.75rem">
         <div class="qr-box">
           <i class="ti ti-map-pin" style="font-size:26px;color:var(--amber)"></i>
@@ -660,7 +496,7 @@ body {
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════ STEP 3 ═══════════════════════════════════ -->
+  <!-- STEP 3 -->
   <div id="sec3" class="section">
     <div class="success-wrap">
       <div class="success-icon">
@@ -689,37 +525,17 @@ body {
 </div>
 
 <script>
-// ============================================================
-// CONFIG — แก้ URL นี้หลัง Deploy Google Apps Script
-// ============================================================
-var GAS_URL = 'https://script.google.com/macros/s/AKfycbxGjJGCPqUAsAepeMvkIL5W9F3zhyrC4htNuBRpmHRoSHkE7aZQ1DazgZxKcWE1k4xB/exec';
-// ============================================================
+var GAS_URL = 'https://script.google.com/macros/s/AKfycbx8LgLsCEPnhBKAaIzU9B9p-3_fmATcDm82ykD3PzGpwHTWzO1riQODuGpn9b_LpOsJ/exec';
 
 var st = { color:'bw', size:'a4', bind:'none', payMethod:'qr', slip1:false, slip2:false };
 
-// ── ตารางราคาต่อแผ่น ──
-// bw-a4=1, bw-a3=5, color-a4=5, color-a3=20
-var pricePerSheet = {
-  'bw-a4':    1,
-  'bw-a3':    5,
-  'color-a4': 5,
-  'color-a3': 20
-};
-
-// เย็บมุม = ฟรี (0 บาท), spiral=30, cover=50
-var bindMap = { none:0, staple:0, spiral:30, cover:50 };
+var pricePerSheet = { 'bw-a4':1, 'bw-a3':5, 'color-a4':5, 'color-a3':20 };
+var bindMap  = { none:0, staple:0, spiral:30, cover:50 };
 var colorLbl = { bw:'ขาว-ดำ', color:'สี' };
 var bindLbl  = { none:'ไม่เย็บ', staple:'เย็บมุม', spiral:'สปริง', cover:'สันกาว' };
 var payLbl   = { qr:'QR พร้อมเพย์', transfer:'โอนธนาคาร', cash:'เงินสด ณ ร้าน' };
+var priceHints = { 'bw-a4':'ขาว-ดำ A4 = 1 ฿/แผ่น', 'bw-a3':'ขาว-ดำ A3 = 5 ฿/แผ่น', 'color-a4':'สี A4 = 5 ฿/แผ่น', 'color-a3':'สี A3 = 20 ฿/แผ่น' };
 
-var priceHints = {
-  'bw-a4':    'ขาว-ดำ A4 = 1 ฿/แผ่น',
-  'bw-a3':    'ขาว-ดำ A3 = 5 ฿/แผ่น',
-  'color-a4': 'สี A4 = 5 ฿/แผ่น',
-  'color-a3': 'สี A3 = 20 ฿/แผ่น'
-};
-
-// ── วันที่ขั้นต่ำ = วันนี้ ──
 (function(){
   var t=new Date();
   var s=t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0');
@@ -727,223 +543,181 @@ var priceHints = {
   document.getElementById('pickDate').value=s;
 })();
 
-// ── Option Toggle ──
-function sel(btn, type, val) {
-  var map = { color:['bw','color'], size:['a4','a3'], bind:['none','staple','spiral','cover'] };
-  map[type].forEach(function(v){ var el=document.getElementById('o-'+v); if(el) el.classList.remove('active'); });
-  btn.classList.add('active');
-  st[type] = val;
-  calc();
+function sel(btn,type,val){
+  var map={color:['bw','color'],size:['a4','a3'],bind:['none','staple','spiral','cover']};
+  map[type].forEach(function(v){var el=document.getElementById('o-'+v);if(el)el.classList.remove('active');});
+  btn.classList.add('active'); st[type]=val; calc();
 }
 
-// ── Calculate Price ──
-function calc() {
-  var pages  = Math.max(1, parseInt(document.getElementById('pages').value)||1);
-  var copies = Math.max(1, parseInt(document.getElementById('copies').value)||1);
-  var key    = st.color+'-'+st.size;
-  var pp     = pricePerSheet[key] || 1;
-  var printC = pages * copies * pp;
-  var bindC  = (bindMap[st.bind]||0) * copies;
-
-  document.getElementById('prPrint').textContent = printC+' ฿';
-  document.getElementById('prBind').textContent  = bindC+' ฿';
-  document.getElementById('prTotal').textContent = (printC+bindC)+' ฿';
-
-  // อัปเดต price hint
-  document.getElementById('priceHintText').textContent = priceHints[key];
+function calc(){
+  var pages=Math.max(1,parseInt(document.getElementById('pages').value)||1);
+  var copies=Math.max(1,parseInt(document.getElementById('copies').value)||1);
+  var key=st.color+'-'+st.size;
+  var pp=pricePerSheet[key]||1;
+  var printC=pages*copies*pp;
+  var bindC=(bindMap[st.bind]||0)*copies;
+  document.getElementById('prPrint').textContent=printC+' ฿';
+  document.getElementById('prBind').textContent=bindC+' ฿';
+  document.getElementById('prTotal').textContent=(printC+bindC)+' ฿';
+  document.getElementById('priceHintText').textContent=priceHints[key];
 }
 
-// ── File Upload ──
-function handleFile(inp) {
-  if (inp.files[0]) {
-    document.getElementById('fname').textContent = '✓ '+inp.files[0].name;
+function handleFile(inp){
+  if(inp.files[0]){
+    document.getElementById('fname').textContent='✓ '+inp.files[0].name;
     document.getElementById('uploadArea').classList.add('has-file');
   }
 }
 
-function handleSlip(inp, areaId, nameId, slotNum) {
-  if (inp.files[0]) {
-    document.getElementById(nameId).textContent = '✓ '+inp.files[0].name;
+function handleSlip(inp,areaId,nameId,slotNum){
+  if(inp.files[0]){
+    document.getElementById(nameId).textContent='✓ '+inp.files[0].name;
     document.getElementById(areaId).classList.add('has-slip');
-    if (slotNum===1) st.slip1=true;
-    else st.slip2=true;
+    if(slotNum===1)st.slip1=true; else st.slip2=true;
   }
 }
 
-// ── Payment Method ──
-function selPay(el, method) {
-  document.querySelectorAll('.pay-method').forEach(function(m){ m.classList.remove('active'); });
-  el.classList.add('active');
-  st.payMethod = method;
-  document.getElementById('qrSection').style.display      = method==='qr'       ? 'block':'none';
-  document.getElementById('transferSection').style.display = method==='transfer'  ? 'block':'none';
-  document.getElementById('cashSection').style.display     = method==='cash'      ? 'block':'none';
+function selPay(el,method){
+  document.querySelectorAll('.pay-method').forEach(function(m){m.classList.remove('active');});
+  el.classList.add('active'); st.payMethod=method;
+  document.getElementById('qrSection').style.display     =method==='qr'      ?'block':'none';
+  document.getElementById('transferSection').style.display=method==='transfer'?'block':'none';
+  document.getElementById('cashSection').style.display    =method==='cash'    ?'block':'none';
 }
 
-// ── Validate & Go Step 2 ──
-function goStep2() {
-  var name  = document.getElementById('cname').value.trim();
-  var phone = document.getElementById('cphone').value.trim();
-  var date  = document.getElementById('pickDate').value;
-  var time  = document.getElementById('pickTime').value;
-  if (!name||!phone||!date||!time) {
-    showToast('กรุณากรอกชื่อไลน์ เบอร์ วันที่ และเวลาให้ครบก่อนนะคะ');
-    return;
+function goStep2(){
+  var name =document.getElementById('cname').value.trim();
+  var phone=document.getElementById('cphone').value.trim();
+  var ref  =document.getElementById('cref').value.trim();
+  var date =document.getElementById('pickDate').value;
+  var time =document.getElementById('pickTime').value;
+  if(!name||!phone||!ref||!date||!time){
+    showToast('กรุณากรอกข้อมูลให้ครบทุกช่องก่อนนะคะ'); return;
   }
-  var total   = document.getElementById('prTotal').textContent;
-  var pages   = document.getElementById('pages').value;
-  var copies  = document.getElementById('copies').value;
-  document.getElementById('sumDetail').textContent = colorLbl[st.color]+' · '+st.size.toUpperCase()+' · '+bindLbl[st.bind]+' · '+pages+' หน้า × '+copies+' ชุด';
-  document.getElementById('sumTotal').textContent  = total;
-  document.getElementById('qrAmount').textContent  = total;
-  document.getElementById('transferAmt').textContent = total;
+  var total=document.getElementById('prTotal').textContent;
+  var pages=document.getElementById('pages').value;
+  var copies=document.getElementById('copies').value;
+  document.getElementById('sumDetail').textContent=colorLbl[st.color]+' · '+st.size.toUpperCase()+' · '+bindLbl[st.bind]+' · '+pages+' หน้า × '+copies+' ชุด';
+  document.getElementById('sumTotal').textContent=total;
+  document.getElementById('qrAmount').textContent=total;
+  document.getElementById('transferAmt').textContent=total;
   setStep(2);
 }
 
-function goBack() { setStep(1); }
+function goBack(){ setStep(1); }
 
-// ── Confirm & Submit ──
-function confirmOrder() {
-  if (st.payMethod!=='cash' && !st.slip1 && !st.slip2) {
-    showToast('กรุณาอัปโหลดสลิปการชำระเงินด้วยนะคะ');
-    return;
+function confirmOrder(){
+  if(st.payMethod!=='cash'&&!st.slip1&&!st.slip2){
+    showToast('กรุณาอัปโหลดสลิปการชำระเงินด้วยนะคะ'); return;
   }
-  var code    = genCode();
-  var pages   = parseInt(document.getElementById('pages').value)||1;
-  var copies  = parseInt(document.getElementById('copies').value)||1;
-  var totalStr= document.getElementById('sumTotal').textContent;
-  var totalNum= parseInt(totalStr)||0;
+  var code    =genCode();
+  var totalStr=document.getElementById('sumTotal').textContent;
+  var totalNum=parseInt(totalStr)||0;
 
-  var orderData = {
+  var orderData={
     action:          'newOrder',
     order_code:      code,
-    line_name:       document.getElementById('cname').value.trim(),
+    customer_name:   document.getElementById('cname').value.trim(),
+    customer_ref:    document.getElementById('cref').value.trim(),
     phone:           document.getElementById('cphone').value.trim(),
     color_type:      st.color,
     paper_size:      st.size.toUpperCase(),
     binding:         st.bind,
-    pages:           pages,
-    copies:          copies,
+    pages:           parseInt(document.getElementById('pages').value)||1,
+    copies:          parseInt(document.getElementById('copies').value)||1,
     estimated_price: totalNum,
     pickup_date:     document.getElementById('pickDate').value,
     pickup_time:     document.getElementById('pickTime').value,
     payment_method:  st.payMethod,
-    payment_status:  st.payMethod==='cash' ? 'pending' : 'paid',
+    payment_status:  st.payMethod==='cash'?'pending':'paid',
     note:            document.getElementById('cnote').value.trim(),
-    slip:            (st.slip1||st.slip2) ? 'slip_'+code+'.jpg' : ''
+    slip:            (st.slip1||st.slip2)?'slip_'+code+'.jpg':''
   };
 
   showLoading('กำลังบันทึกคำสั่ง...');
-
-  fetch(GAS_URL, {
-    method: 'POST',
-    body: JSON.stringify(orderData)
-  })
-  .then(function(r){ return r.json(); })
-  .then(function(res){
-    showSuccess(orderData, code, totalStr);
-  })
-  .catch(function(){
-    console.warn('GAS Error - showing success anyway');
-    showSuccess(orderData, code, totalStr);
-  })
-  .finally(function(){
-    hideLoading();
-  });
+  fetch(GAS_URL,{method:'POST',body:JSON.stringify(orderData)})
+    .then(function(r){return r.json();})
+    .then(function(){showSuccess(orderData,code,totalStr);})
+    .catch(function(){showSuccess(orderData,code,totalStr);})
+    .finally(function(){hideLoading();});
 }
 
-function showSuccess(d, code, totalStr) {
-  document.getElementById('finalCode').textContent = code;
-  document.getElementById('si-name').textContent   = d.line_name;
-  document.getElementById('si-date').textContent   = fmtDate(d.pickup_date);
-  document.getElementById('si-time').textContent   = d.pickup_time+' น.';
-  document.getElementById('si-price').textContent  = totalStr;
-  document.getElementById('si-pay').textContent    = payLbl[d.payment_method];
-  var badgeEl = document.getElementById('paidBadgeText');
-  if (d.payment_method==='cash') {
-    badgeEl.textContent = 'รอชำระ ณ ร้าน';
-    badgeEl.parentElement.style.background = '#FAEEDA';
-    badgeEl.parentElement.style.color = '#633806';
+function showSuccess(d,code,totalStr){
+  document.getElementById('finalCode').textContent=code;
+  document.getElementById('si-name').textContent=d.customer_name;
+  document.getElementById('si-date').textContent=fmtDate(d.pickup_date);
+  document.getElementById('si-time').textContent=d.pickup_time+' น.';
+  document.getElementById('si-price').textContent=totalStr;
+  document.getElementById('si-pay').textContent=payLbl[d.payment_method];
+  var badgeEl=document.getElementById('paidBadgeText');
+  if(d.payment_method==='cash'){
+    badgeEl.textContent='รอชำระ ณ ร้าน';
+    badgeEl.parentElement.style.background='#FAEEDA';
+    badgeEl.parentElement.style.color='#633806';
   } else {
-    badgeEl.textContent = 'ชำระเงินแล้ว';
-    badgeEl.parentElement.style.background = 'var(--green-lt)';
-    badgeEl.parentElement.style.color = '#27500A';
+    badgeEl.textContent='ชำระเงินแล้ว';
+    badgeEl.parentElement.style.background='var(--green-lt)';
+    badgeEl.parentElement.style.color='#27500A';
   }
   setStep(3);
 }
 
-// ── Step UI ──
-function setStep(n) {
+function setStep(n){
   ['sec1','sec2','sec3'].forEach(function(s,i){
-    document.getElementById(s).classList.toggle('show', i===n-1);
+    document.getElementById(s).classList.toggle('show',i===n-1);
   });
-  for (var i=1; i<=3; i++) {
-    var num = document.getElementById('sn'+i);
-    var lbl = document.getElementById('sl'+i);
-    if (i<n) {
-      num.className='step-num done';
-      num.innerHTML='<i class="ti ti-check" style="font-size:12px"></i>';
-    } else if (i===n) {
-      num.className='step-num active'; num.textContent=i;
-      lbl.className='step-label active';
-    } else {
-      num.className='step-num'; num.textContent=i;
-      lbl.className='step-label';
-    }
+  for(var i=1;i<=3;i++){
+    var num=document.getElementById('sn'+i);
+    var lbl=document.getElementById('sl'+i);
+    if(i<n){num.className='step-num done';num.innerHTML='<i class="ti ti-check" style="font-size:12px"></i>';}
+    else if(i===n){num.className='step-num active';num.textContent=i;lbl.className='step-label active';}
+    else{num.className='step-num';num.textContent=i;lbl.className='step-label';}
   }
-  window.scrollTo({ top:0, behavior:'smooth' });
+  window.scrollTo({top:0,behavior:'smooth'});
 }
 
-// ── Reset ──
-function resetForm() {
-  document.getElementById('cname').value = '';
-  document.getElementById('cphone').value = '';
-  document.getElementById('cnote').value = '';
-  document.getElementById('fname').textContent = '';
+function resetForm(){
+  ['cname','cphone','cref','cnote'].forEach(function(id){document.getElementById(id).value='';});
+  document.getElementById('fname').textContent='';
   document.getElementById('uploadArea').classList.remove('has-file');
-  document.getElementById('slipName').textContent = '';
+  document.getElementById('slipName').textContent='';
   document.getElementById('slipArea').classList.remove('has-slip');
-  document.getElementById('slipName2').textContent = '';
+  document.getElementById('slipName2').textContent='';
   document.getElementById('slipArea2').classList.remove('has-slip');
   st.slip1=false; st.slip2=false;
   var t=new Date();
   var s=t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0');
   document.getElementById('pickDate').value=s;
   document.getElementById('pickTime').value='';
-  setStep(1);
-  calc();
+  setStep(1); calc();
 }
 
-// ── Helpers ──
-function genCode() {
-  var c='ABCDEFGHJKLMNPQRSTUVWXYZ23456789', r='';
-  for (var i=0;i<6;i++) r+=c[Math.floor(Math.random()*c.length)];
+function genCode(){
+  var c='ABCDEFGHJKLMNPQRSTUVWXYZ23456789',r='';
+  for(var i=0;i<6;i++)r+=c[Math.floor(Math.random()*c.length)];
   return r;
 }
 
-function fmtDate(val) {
-  if(!val) return '-';
-  var parts=val.split('-');
-  if(parts.length<3) return val;
-  var months=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
-  return parseInt(parts[2])+' '+months[parseInt(parts[1])-1]+' '+(parseInt(parts[0])+543);
+function fmtDate(val){
+  if(!val)return '-';
+  var p=val.split('-');
+  if(p.length<3)return val;
+  var m=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+  return parseInt(p[2])+' '+m[parseInt(p[1])-1]+' '+(parseInt(p[0])+543);
 }
 
 var toastTimer;
-function showToast(msg) {
+function showToast(msg){
   var el=document.getElementById('toast');
-  el.textContent=msg; el.classList.add('show');
+  el.textContent=msg;el.classList.add('show');
   clearTimeout(toastTimer);
-  toastTimer=setTimeout(function(){ el.classList.remove('show'); }, 3000);
+  toastTimer=setTimeout(function(){el.classList.remove('show');},3000);
 }
-
-function showLoading(msg) {
-  document.getElementById('loadingText').textContent = msg||'กำลังโหลด...';
+function showLoading(msg){
+  document.getElementById('loadingText').textContent=msg||'กำลังโหลด...';
   document.getElementById('loadingOverlay').classList.add('show');
 }
-function hideLoading() {
-  document.getElementById('loadingOverlay').classList.remove('show');
-}
+function hideLoading(){document.getElementById('loadingOverlay').classList.remove('show');}
 
 calc();
 </script>
